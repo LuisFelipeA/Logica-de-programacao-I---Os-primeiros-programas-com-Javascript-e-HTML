@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Advinhação</title>
+</head>
+<body>
+
+
+    <script>
+                
+        function PulaLinha() {
+            document.write("<br>");
+            document.write("<br>");
+        }
+        
+        function Mostra(frase) {
+            document.write(frase);
+            PulaLinha();
+        }
+
+        var aleatorio = Math.round(Math.random()*10);
+
+        var jogador = parseInt(prompt("Digite um numero entre 0 e 10 para adivinhar o numero gerado: "));
+
+
+        if (jogador >= 1 && jogador <= 10 ){
+
+            if (jogador == aleatorio){
+                Mostra("Acertou!!");
+            }
+
+            else{
+                Mostra("Errou!!");
+            }
+        }
+
+        else{
+            Mostra("Valor invalido. Digite um numero entre 1 e 10.")
+        }
+
+
+        Mostra("O numero gerado foi: " + aleatorio);
+        Mostra("O numero digitado foi: " + jogador);
+        Mostra("Atualize a pagina para jogar novamente!")
+
+    </script>
+    
+</body>
+</html>
