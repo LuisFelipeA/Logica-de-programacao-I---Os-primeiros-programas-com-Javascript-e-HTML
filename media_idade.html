@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+
+
+    <script>
+                
+        function PulaLinha() {
+            document.write("<br>");
+            document.write("<br>");
+        }
+        
+        function Mostra(frase) {
+            document.write(frase);
+            PulaLinha();
+        }
+
+        var qtdPessoas = parseInt(prompt("Digite a quantidade de pessoas: "));
+        var contador = 1;
+        var somaIdade = 0
+
+        while (contador <= qtdPessoas){
+            var idade = parseInt(prompt("Digite a idade da " + contador + "ª pessoa: "));
+            contador++;
+            somaIdade = somaIdade + idade;
+
+        }
+
+        var media = somaIdade/qtdPessoas;
+
+        Mostra("A média da idade dessas pessoas é " + media + " anos.");
+    
+    </script>
+    
+</body>
+</html>
