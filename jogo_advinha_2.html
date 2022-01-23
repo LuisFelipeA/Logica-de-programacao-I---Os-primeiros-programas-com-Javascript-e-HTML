@@ -22,13 +22,16 @@
             
             if (jogador.value == aleatorio){
                 alert("Acertou!!");
-                alert("Numero gerado: " + aleatorio);
+
             }
 
             else{
                 alert("Errou!!");
-                alert("Numero gerado: " + aleatorio);
+
             }
+
+            jogador.value = "";
+            jogador.focus();
 
         }      
         
