@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Advinhação</title>
+</head>
+<body>
+    
+    <h1>Tente adivinhar um dos 4 numeros que esta na lista</h1>
+    <input/>
+    <button>comparar</button>
+
+    <script>
+        var numeros = [3,6,9,5];
+
+        var jogador = document.querySelector("input");
+
+
+        function verifica() {
+            
+            var achou = false;
+            for(var posicao = 0; posicao < numeros.length; posicao++)
+                if (jogador.value == numeros[posicao]){
+                    alert("Acertou!!");
+                    achou = true;
+                    break;
+
+                }
+            
+            if (achou == false){
+                alert("Errou!!");
+            }
+
+            jogador.value = "";
+            jogador.focus();
+
+        }      
+        
+        var button = document.querySelector("button");
+
+        button.onclick = verifica;
+
+    </script>
+    
+</body>
+</html>
